@@ -6,11 +6,11 @@ using System.Text;
  * Name: Dennis Kanzira
  * Date: July 25, 2017
  * Description: This is the Card Class
- * Version: 0.1 - Created the Card class
+ * Version: 0.2 - Implemented the ICloneable interface
  */
 namespace Comp123_S2017_002
 {
-    public class Card
+    public class Card : ICloneable
     {
         //PRIVATE INSTANCE VARIABLES(FIELDS)
         private Face _face;
@@ -55,5 +55,13 @@ namespace Comp123_S2017_002
         //PRIVATE METHODS
 
         //PUBLIC METHODS
+        /// <summary>
+        /// This method overrides the built in method
+        /// </summary>
+        /// <returns></returns>
+        public object Clone()
+        {
+            return new Card(this.Face, this.Suit);
+        }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
  * Name:Dennis Kanzira
  * Date:July 25 2017
  * Description: Project 11 Demo
- * Version: 0.2 Implemented the Deck Class
+ * Version: 0.3  Test the Shuffles method
 */
 namespace Comp123_S2017_002
 {
@@ -17,6 +17,12 @@ namespace Comp123_S2017_002
         static void Main(string[] args)
         {
             Deck deck = new Deck();
+            Console.WriteLine("This is the original Deck");
+            Console.WriteLine("========================================================");
+            Console.WriteLine(deck.ToString());
+            Console.WriteLine();
+            Console.WriteLine("========================================================");
+            deck.Shuffle();
             Console.WriteLine(deck.ToString());
         }
     }
