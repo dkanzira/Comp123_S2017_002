@@ -1,10 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Comp123_S2017_002.Card">
-    <Position X="6" Y="1" Width="1.5" />
+  <Class Name="Comp123_S2017_002.Card" Collapsed="true">
+    <Position X="5" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAABAAAAAAAAAAAAABAgAAAAAAAAAAAAAAAAAgAA=</HashCode>
       <FileName>Card.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Comp123_S2017_002.Deck" Collapsed="true">
+    <Position X="0.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Deck.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="Comp123_S2017_002.Suit" Collapsed="true">
