@@ -17,10 +17,13 @@ namespace Comp123_S2017_002
         static void Main(string[] args)
         {
             Deck deck = new Deck();
-            Console.WriteLine("This is the original Deck");
+            Console.WriteLine("========================================================");
+            Console.WriteLine("This is the original Deck:" + deck.Count);
             Console.WriteLine("========================================================");
             Console.WriteLine(deck.ToString());
             Console.WriteLine();
+            Console.WriteLine("========================================================");
+            Console.WriteLine("This is the shuffled Deck:" + deck.Count);
             Console.WriteLine("========================================================");
             deck.Shuffle();
             Console.WriteLine(deck.ToString());

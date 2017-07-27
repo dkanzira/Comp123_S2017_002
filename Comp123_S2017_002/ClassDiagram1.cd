@@ -3,7 +3,7 @@
   <Class Name="Comp123_S2017_002.Card" Collapsed="true">
     <Position X="5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAABAAAAAAAAAAAAABAgAAAAAAAAAAAAAAAAAgBA=</HashCode>
+      <HashCode>AAAAAABAAAAAAACAAAAABAgAAAAAAAAAAAAAAAAAgBA=</HashCode>
       <FileName>Card.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -13,6 +13,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAEAAAAAAAAAAAABAAAAAAAAAAAEAE=</HashCode>
       <FileName>Deck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Comp123_S2017_002.CardList">
+    <Position X="3.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CardList.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="Comp123_S2017_002.Suit" Collapsed="true">

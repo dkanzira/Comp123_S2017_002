@@ -6,13 +6,13 @@ using System.Text;
  * Name: Dennis Kanzira
  * Date: July 25, 2017
  * Description: This is the Card Class
- * Version: 0.2 - Added a shuffle method
+ * Version: 0.4 - refactored tp extend the cardlist abstract class
  */
 namespace Comp123_S2017_002
 {
-    public class Deck:List<Card>
+    public class Deck:CardList
     {
-        //PRIVATE INSTANCE VARIABLES(FIELDS)
+        //PRIVATE INSTANCE VARIABLES(FIELDS) -------------------------------
         private Random _random;
         //PUBLIC PROPERITIES
 
@@ -24,21 +24,13 @@ namespace Comp123_S2017_002
                 return this._random;
             }
         }
-        
         //CONSTRUCTORS -----------------------------------------------------
-
-        /// <summary>
-        /// This is the main constructor
-        /// </summary>
-        public Deck()
-        {
-            this._initialize();
-        }
-        //PRIVATE METHODS
+   
+        //PRIVATE METHODS --------------------------------------------------
         /// <summary>
         /// This is the initalize method, it sets values for private 
         /// </summary>
-        private void _initialize()
+        protected override void _initialize()
         {
             //initialize the pseudo-random number generator
             this._random = new Random();
@@ -54,7 +46,7 @@ namespace Comp123_S2017_002
             }
             
         }
-        //PUBLIC METHODS
+        //PUBLIC METHODS ---------------------------------------------------
         /// <summary>
         /// This method overrides the built-in To String method.
         /// </summary>
@@ -68,7 +60,6 @@ namespace Comp123_S2017_002
             }
             return outputString;
         }
-
         /// <summary>
         /// This method shuffles the deck by using random indices to select two cards at a time
         /// it uses a Fisher Gates like algorithim
@@ -85,10 +76,8 @@ namespace Comp123_S2017_002
                 secondCard = this.Random.Next(0, 52);
 
                 tempCard = (Card)this[secondCard].Clone();
-                this[secondCard].Face = this[firstCard].Face;
-                this[secondCard].Suit = this[firstCard].Suit;
-                this[firstCard].Face = tempCard.Face;
-                this[firstCard].Suit = tempCard.Suit;
+                Card.Overwrite(this[secondCard], this[firstCard]);
+                Card.Overwrite(this[firstCard], tempCard);
             }
         }
     }
