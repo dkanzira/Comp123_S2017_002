@@ -70,5 +70,6 @@ namespace Comp123_S2017_002
             second.Face = second.Face;
             second.Suit = second.Suit;
         }
+
     }
 }

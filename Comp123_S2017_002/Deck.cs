@@ -6,7 +6,7 @@ using System.Text;
  * Name: Dennis Kanzira
  * Date: July 25, 2017
  * Description: This is the Card Class
- * Version: 0.4 - refactored tp extend the cardlist abstract class
+ * Version: 0.5 - Added a new method called Deal5
  */
 namespace Comp123_S2017_002
 {
@@ -54,6 +54,8 @@ namespace Comp123_S2017_002
         public override string ToString()
         {
             string outputString = "";
+            outputString += "Deck Contains  Number of Cards: " + this.Count + "\n";
+            outputString += "==================================\n";
             foreach (Card card in this)
             {
                 outputString += "The " + card.Face + " of " + card.Suit + "\n";
@@ -80,5 +82,37 @@ namespace Comp123_S2017_002
                 Card.Overwrite(this[firstCard], tempCard);
             }
         }
+        /// <summary>
+        /// This method returns the top card of the Deck
+        /// </summary>
+        /// <returns></returns>
+        public Card Deal1()
+        {
+            Card topCard = this[0];
+            this.RemoveAt(0); //this removes the top card from the deck
+
+            //for testing /debugging only
+            Console.WriteLine("Dealt 1 card - Size of Deck:"+this.Count);
+            return topCard;
+        }
+        /// <summary>
+        /// This method deals 5 cards from the top of the deck
+        /// </summary>
+        /// <returns></returns>
+        public Hand Deal5()
+        {
+            Hand handfive = new Hand();
+            for (int i = 0; i <=5; i++)
+            {
+                Card topCards = this[0];
+                handfive.Add(this[0]);
+                this.RemoveAt(5);
+            }
+            return handfive;
+           
+          //  Console.WriteLine("Dealt 5 card - Size of Deck:" + this.Count);
+           
+        }
+
     }
 }
